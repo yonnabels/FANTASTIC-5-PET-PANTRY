@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PetPantry+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="relative bg-white">
+  <!-- Header Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    <div class="flex items-center space-x-3">
+<div class="rounded-full border-2 border-orange-500 w-10 h-10 flex items-center justify-center overflow-hidden">
+  <img src="logo.png" alt="PetPantry+ logo" class="w-full h-full object-contain">
+</div>
+      <span class="font-semibold text-lg text-orange-500 select-none">PetPantry+</span>
+    </div>
+    <ul class="hidden md:flex items-center space-x-10 font-semibold text-gray-700 font-inter">
+      <li><a href="#" class="hover:text-orange-500 transition">Home</a></li>
+      <li><a href="#" class="hover:text-orange-500 transition">Shop</a></li>
+      <li><a href="#" class="hover:text-orange-500 transition">About us</a></li>
+      <li><a href="#" class="hover:text-orange-500 transition">Contact us</a></li>
+    </ul>
+    <div class="hidden md:flex items-center space-x-4 text-gray-600 text-lg">
+      <button aria-label="Search" title="Search" class="hover:text-orange-500 transition">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button aria-label="User Account" title="User Account" class="hover:text-orange-500 transition">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button aria-label="Cart" title="Cart" class="hover:text-orange-500 transition relative">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l.89 4.48M5 6h15l-1.68 8.39a2 2 0 0 1-2 1.61H7a2 2 0 0 1-2-1.61L3 6"/></svg>
+        <span class="absolute -top-1 -right-1 text-xs bg-orange-500 text-white rounded-full w-4 h-4 flex items-center justify-center font-bold">5</span>
+      </button>
+    </div>
+  </nav>
+</header>
+  
+  <main>
+    <!-- Hero Section with Carousel -->
+    <section class="relative h-[720px] overflow-hidden">
+      <div class="carousel relative w-full h-full">
+        <div class="carousel-inner relative w-full h-full">
+          <div class="carousel-item absolute w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="bg1.png" alt="Pet food background 1" class="w-full h-full object-cover">
+          </div>
+          <div class="carousel-item absolute w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="bg2.png" alt="Pet food background 2" class="w-full h-full object-cover">
+          </div>
+          <div class="carousel-item absolute w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="bg3.png" alt="Pet food background 3" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <!-- Carousel Dots -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+          <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" data-index="0"></button>
+          <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" data-index="1"></button>
+          <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" data-index="2"></button>
+        </div>
+      </div>
+      <div class="absolute top-0 -left-[8rem] opacity-20 select-none">
+        <!-- Placeholder for decorative element -->
+      </div>
+      <div class="absolute inset-0 flex flex-col md:flex-row items-center max-w-7xl mx-auto px-8 py-16 gap-6 z-10 translate-x-16 md:translate-x-32">
+        <div class="flex-1 text-center md:text-left max-w-lg">
+          <h1 class="text-4xl md:text-5xl font-extrabold uppercase tracking-wide leading-tight text-white">HIGH QUALITY <br /><span class="text-5xl md:text-6xl">PET FOOD</span></h1>
+          <p class="mt-3 text-sm text-white opacity-75">Your Pet Deserves the Best</p>
+          <button class="btn-black mt-6">SHOP NOW</button>
+        </div>
+        <div class="flex-1 relative flex justify-center md:justify-end">
+          <!-- Placeholder for hero image if needed -->
+        </div>
+      </div>
+    </section>
+
+<!-- Best Seller Section -->
+<section class="py-16 max-w-7xl mx-auto px-4">
+  <h2 class="text-center text-2xl font-extrabold mb-10">
+    <span class="text-orange-500">Best </span><span>Seller</span>
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <!-- Product card 1 -->
+    <article class="border rounded-lg p-4 shadow-sm relative hover:shadow-lg transition-shadow cursor-pointer">
+      <span class="badge-hot absolute top-3 right-3">Hot</span>
+      <div class="h-48 flex items-center justify-center mb-3  rounded">
+        <img src="product1.png" alt="Freeze-Dried Grass-Fed Beef Patties" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="text-center">
+        <p class="text-xs font-semibold text-gray-700 mb-0.5">Freeze-Dried Grass-Fed Beef Patties</p>
+        <div class="flex justify-center gap-1 mb-1" aria-label="Star rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          
+        </div>
+        <p class="text-orange-500 font-semibold text-lg">PHP 2,500 </p>
+      </div>
+    </article>
+    </article>
+    <!-- Product card 2 -->
+    <article class="border rounded-lg p-4 shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+      <div class="h-48 flex items-center justify-center mb-3  rounded">
+        <img src="product2.png" alt="Tuna & Carrot Casserole (Cat)" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="text-center">
+        <p class="text-xs font-semibold text-gray-700 mb-0.5">Tuna & Carrot Casserole (Cat)</p>
+        <div class="flex justify-center gap-1 mb-1" aria-label="Star rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-orange-500 font-semibold text-lg">PHP 200</p>
+      </div>
+    </article>
+    <!-- Product card 3 -->
+    <article class="border rounded-lg p-4 shadow-sm relative hover:shadow-lg transition-shadow cursor-pointer">
+      <div class="h-48 flex items-center justify-center mb-3  rounded">
+        <img src="product3.png" alt="Hip & Joint Turmeric Powder" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="text-center">
+        <p class="text-xs font-semibold text-gray-700 mb-0.5">Hip & Joint Turmeric Powder</p>
+        <div class="flex justify-center gap-1 mb-1" aria-label="Star rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-orange-500 font-semibold text-lg">PHP 800</p>
+      </div>
+    </article>
+    <!-- Product card 4 -->
+    <article class="border rounded-lg p-4 shadow-sm relative hover:shadow-lg transition-shadow cursor-pointer">
+      <span class="badge-hot absolute top-3 right-3">Hot</span>
+      <div class="h-48 flex items-center justify-center mb-3  rounded">
+        <img src="product4.png" alt="Lamb & Brown Rice Dinner" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="text-center">
+        <p class="text-xs font-semibold text-gray-700 mb-0.5">Lamb & Brown Rice Dinner</p>
+        <div class="flex justify-center gap-1 mb-1" aria-label="Star rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-orange-500 font-semibold text-lg">PHP 250</p>
+      </div>
+    </article>
+    <!-- Product card 5 -->
+    <article class="border rounded-lg p-4 shadow-sm relative hover:shadow-lg transition-shadow cursor-pointer">
+      <div class="h-48 flex items-center justify-center mb-3 rounded">
+        <img src="product5.png" alt="Organic Chicken & Pumpkin Meal for Cats" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="text-center">
+        <p class="text-xs font-semibold text-gray-700 mb-0.5">Organic Chicken & Pumpkin Meal (Cats)</p>
+        <div class="flex justify-center gap-1 mb-1" aria-label="Star rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-orange-500 font-semibold text-lg">PHP 1,500</p>
+      </div>
+    </article>
+    <!-- Product card 6 -->
+    <article class="border rounded-lg p-4 shadow-sm relative hover:shadow-lg transition-shadow cursor-pointer">
+      <span class="badge-hot absolute top-3 right-3">Hot</span>
+      <div class="h-48 flex items-center justify-center mb-3  rounded">
+        <img src="product6.png" alt="CBD Infused Relaxation Bites" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="text-center">
+        <p class="text-xs font-semibold text-gray-700 mb-0.5">CBD Infused Relaxation Bites</p>
+        <div class="flex justify-center gap-1 mb-1" aria-label="Star rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+
+        </div>
+        <p class="text-orange-500 font-semibold text-lg">PHP 2,000</p>
+      </div>
+    </article>
+    <!-- Product card 7 -->
+    <article class="border rounded-lg p-4 shadow-sm relative hover:shadow-lg transition-shadow cursor-pointer">
+      <div class="h-48 flex items-center justify-center mb-3  rounded">
+        <img src="product7.png" alt="Salmon Mousse for Senior Pets" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="text-center">
+        <p class="text-xs font-semibold text-gray-700 mb-0.5">Salmon Mousse for Senior Pets</p>
+        <div class="flex justify-center gap-1 mb-1" aria-label="Star rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+
+        </div>
+        <p class="text-orange-500 font-semibold text-lg">PHP 200</p>
+      </div>
+    </article>
+    <!-- Product card 8 -->
+    <article class="border rounded-lg p-4 shadow-sm relative hover:shadow-lg transition-shadow cursor-pointer">
+      <span class="badge-hot absolute top-3 right-3">Hot</span>
+      <div class="h-48 flex items-center justify-center mb-3  rounded">
+        <img src="product8.png" alt="Turkey & Quinoa Puppy Formula" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="text-center">
+        <p class="text-xs font-semibold text-gray-700 mb-0.5">Turkey & Quinoa Puppy Formula</p>
+        <div class="flex justify-center gap-1 mb-1" aria-label="Star rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+
+        </div>
+        <p class="text-orange-500 font-semibold text-lg">PHP 2,000</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+    
+<!-- Testimonial Section with Cat -->
+<section class="relative h-[720px] overflow-hidden mt-24 py-16 flex flex-col md:flex-row items-center gap-6">
+  <div class="absolute inset-0 w-full h-full">
+    <img src="bg4.png" alt="Testimonial background" class="w-full h-full object-cover">
+  </div>
+  <div class="flex-1 max-w-xl z-10 px-6 md:ml-60 pt-12"> 
+    <h3 class="flex items-center gap-3 text-lg mb-4 text-gray-700">Taste Guarantee</h3>
+    <h2 class="text-3xl  mb-3 text-gray-700">Taste it, love it or we’ll replace it... Guaranteed!</h2>
+    <p class="text-sm leading-relaxed mb-6 text-gray-700">At PetPantry+, we believe your dog and cat will love their food so much that if they don’t ... we'll help you find a replacement. That's our taste guarantee.</p>
+    <button class="btn-black">Find out more</button>
+  </div>
+</section>
+
+<!-- Popular Brands Section -->
+<section class="py-14 max-w-7xl mx-auto px-4">
+  <h2 class="text-center text-2xl font-extrabold mb-10">
+    <span class="text-orange-500">Popular </span><span>Brands</span>
+  </h2>
+  <div class="bg-white border rounded-lg p-6 grid grid-cols-5 gap-6 shadow-sm max-w-xl mx-auto">
+    <img src="brand1.png" alt="Brand 1 logo" class="rounded-full w-20 h-20 object-contain cursor-pointer hover:opacity-80 transition">
+    <img src="brand2.png" alt="Brand 2 logo" class="rounded-full w-20 h-20 object-contain cursor-pointer hover:opacity-80 transition">
+    <img src="brand3.png" alt="Brand 3 logo" class="rounded-full w-20 h-20 object-contain cursor-pointer hover:opacity-80 transition">
+    <img src="brand4.png" alt="Brand 4 logo" class="rounded-full w-20 h-20 object-contain cursor-pointer hover:opacity-80 transition">
+    <img src="brand5.png" alt="Brand 5 logo" class="rounded-full w-20 h-20 object-contain cursor-pointer hover:opacity-80 transition">
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->   
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-5 gap-12">
+      <div>
+        <div class="mb-6 flex items-center space-x-3">
+            
+          <div class="text-orange-500 font-extrabold text-xl rounded-full border-2 border-orange-500 w-10 h-10 flex items-center justify-center select-none">
+            <img src="logo.png" alt="PetPantry+ logo" class="w-full h-full object-contain">
+          </div>
+          <span class="font-semibold text-lg text-orange-500 select-none">PetPantry+</span>
+        </div>
+        <p class="text-sm mb-4 max-w-xs">If you have any question, please contact us at <a href="mailto:petpantry@gmail.com" class="text-orange-500 underline">petpantry@gmail.com</a></p>
+        <address class="not-italic text-sm space-y-4">
+          <p>Quezon City</p>
+          <p>+63 929 683 8372</p>
+        </address>
+        
+      </div>
+
+      <div>
+        <h4 class="footer-heading font-inter ">Corporate</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">About Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading font-inter">Customer Service</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading font-inter">Services</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">Shop</a></li>
+        
+        </ul>
+      </div>
+
+      <div class="flex flex-col justify-start">
+        <h4 class="footer-heading mb-4 font-inter">Sign up for offers</h4>
+        <p class="mb-6 max-w-xs text-sm">Sign up for our newsletter to receive exclusive offers & discounts!</p>
+        <div class="flex max-w-xs">
+          <input type="email" placeholder="Your email address.." aria-label="Email address for newsletter" required class="w-full p-2 rounded-l-full border-none outline-none" />
+          <button type="button" aria-label="Subscribe to newsletter" class="bg-orange-500 p-2 rounded-r-full text-white hover:bg-orange-600 transition">
+            <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 4 11 13"></path><path d="M22 4 15 22 11 13 2 9 22 4z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm py-4">© 2025 PetPantry+. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    // Carousel functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const carouselItems = document.querySelectorAll('.carousel-item');
+      const dots = document.querySelectorAll('.carousel-dot');
+      let currentIndex = 0;
+
+      // Show the first item and active dot
+      carouselItems[currentIndex].classList.add('opacity-100');
+      dots[currentIndex].classList.add('bg-orange-500', 'scale-125');
+
+      // Function to show a specific slide
+      function showSlide(index) {
+        carouselItems[currentIndex].classList.remove('opacity-100');
+        dots[currentIndex].classList.remove('bg-orange-500', 'scale-125');
+        currentIndex = index;
+        carouselItems[currentIndex].classList.add('opacity-100');
+        dots[currentIndex].classList.add('bg-orange-500', 'scale-125');
+      }
+
+      // Event listeners for dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+        });
+      });
+
+      // Auto-slide every 7 seconds
+      setInterval(() => {
+        showSlide((currentIndex + 1) % carouselItems.length);
+      }, 7000);
+    });
+  </script>
+</body>
+</html>

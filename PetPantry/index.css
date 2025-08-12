@@ -1,0 +1,96 @@
+/* Custom fonts & styles */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+}
+
+/* In index.css */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Buttons */
+.btn-black {
+  background-color: #000000;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-black:hover {
+  background-color: #333333;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+}
+
+.btn-white:hover {
+  background-color: #f3f3f3;
+}
+
+/* Badge styles */
+
+
+.badge-hot {
+  background-color: #fb7d1b;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+/* Stars rating */
+.star {
+  color: #fac76c;
+  font-size: 0.8rem;
+}
+
+
+
+/* Footer headings */
+.footer-heading {
+  color: #e56736;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Form input */
+input[type="email"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px 0 0 9999px;
+  border: none;
+  outline: none;
+}
+
+/* Submit button in newsletter */
+button[type="submit"] {
+  background-color: #fb7d1b;
+  border-radius: 0 9999px 9999px 0;
+  border: none;
+  padding: 0 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #de6514;
+}
