@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PetPantry Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
+
+<style>
+
+
+  :root {
+    --accent: #FFA500;
+    --accent-dark: #CC8400;
+    --muted: #6b7280;
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --radius: 10px;
+    --max-width: 1200px;
+}
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    background:var(--bg);
+    color:#111827;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* HERO / TOP BANNER */
+  .hero{
+    width:100%;
+    background-image: url("https://petio.wpbingosite.com/wp-content/uploads/2021/03/breadcumd.jpg");
+    background-size:cover;
+    background-position:center;
+    padding:150px 20px;
+    color:white;
+    position:relative;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0; pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;
+    max-width:var(--max-width);
+    margin:0 auto;
+    display:flex;
+    gap:24px;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .hero-title{
+    text-align:center;
+    width:100%;
+  }
+  .hero-title h1{ font-size:48px; margin:0 0 8px; letter-spacing:1px;}
+  .hero-title p{ margin:0; opacity:0.95; font-size:15px; color:rgba(255,255,255,0.95) }
+
+  
+
+  /* MAIN LAYOUT: left filters column + products stretch */
+  .page{
+    max-width:var(--max-width);
+    margin:20px auto;
+    padding:0 20px 60px;
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+  }
+
+  .left-col{
+    width:240px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .controls{
+    background:var(--card);
+    padding:14px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(15,23,42,0.04);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .controls label{ font-size:12px; color:var(--muted); }
+  .controls select, .controls input[type="search"]{
+    width:100%;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid #e6e9ee;
+    background:#fff;
+    outline:none;
+    font-size:14px;
+  }
+
+  /* PRODUCTS AREA */
+  .main-col{ flex:1; }
+
+  /* top bar (results count + sorting small) */
+  .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:16px;
+  }
+  .result-count{ color:var(--muted); font-size:13px; }
+
+  /* Each subcategory group contains a title and a 6-column grid */
+  .subcategory-group{ margin-bottom:36px; background:transparent; }
+  .subcategory-title{
+    font-size:18px; font-weight:700; color:#111827; margin:8px 0 12px; display:flex; align-items:center; gap:12px;
+  }
+  .subcategory-title .view-all{
+    margin-left:auto;
+    font-size:13px;
+    color:var(--muted);
+    cursor:pointer;
+    text-decoration:underline;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap:18px;
+  }
+
+  .card{
+    background:var(--card);
+    border-radius:12px;
+    padding:12px;
+    text-align:center;
+    border:1px solid #f0f2f5;
+    position:relative;
+    min-height:220px;
+  }
+  .card .imgwrap{ width:100%; height:138px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .card img{ max-width:100%; max-height:100%; object-fit:contain }
+
+  .badge{
+    position:absolute; top:10px; left:10px; background:var(--accent); color:white; padding:6px 8px; font-size:12px; border-radius:999px;
+    font-weight:700;
+  }
+  .discount{ background:#ef4444; }
+
+  .card h4{ font-size:14px; margin:10px 0 6px; color:#111827; height:72px; overflow:hidden; }
+  .price{ color:var(--accent); font-weight:700; font-size:15px; }
+  .oldprice{ color:#9ca3af; text-decoration:line-through; margin-left:8px; font-weight:600; font-size:13px; }
+
+  .card .actions{ margin-top:10px; display:flex; gap:8px; justify-content:center; }
+  .btn{
+    padding:8px 12px;border-radius:8px;border:none; cursor:pointer; font-weight:700;
+  }
+  .btn.view{ background:transparent; border:1px solid #e6e9ee; color:#374151; }
+  .btn.cart{ background:var(--accent); color:#fff; }
+
+  /* PAGINATION */
+  .pagination{ display:flex; gap:8px; justify-content:center; margin-top:18px; align-items:center; }
+  .page-btn{ padding:8px 12px; background:#fff;border-radius:8px;border:1px solid #e6e9ee; cursor:pointer; }
+
+  
+
+  /* responsive */
+  @media (max-width:1100px){
+    .grid{ grid-template-columns: repeat(4, 1fr); }
+    .left-col{ width:200px; }
+  }
+  @media (max-width:820px){
+    .page{ flex-direction:column; }
+    .left-col{ width:100%; order:2; }
+    .main-col{ order:1; }
+    .grid{ grid-template-columns: repeat(2, 1fr); }
+    .categories{ justify-content:flex-start }
+  }
+  @media (max-width:420px){
+    .grid{ grid-template-columns: repeat(1, 1fr); }
+    .hero-title h1{ font-size:28px; }
+    .cat .circle{ width:66px; height:66px }
+  }
+</style>
+</head>
+<body>
+    
+    <!-- Header Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    <div class="flex items-center space-x-3">
+<div class="rounded-full border-2 border-orange-500 w-10 h-10 flex items-center justify-center overflow-hidden">
+ <img src="https://petpantry.space/images/logo.png" alt="PetPantry+ logo" class="w-full h-full object-contain">
+
+</div>
+      <span class="font-semibold text-lg text-orange-500 select-none">PetPantry+</span>
+    </div>
+    <ul class="hidden md:flex items-center space-x-10 font-semibold text-gray-700 font-inter">
+      <li><a href="https://petpantry.space/index.html" class="hover:text-orange-500 transition">Home</a></li>
+      <li><a href="https://petpantry.space/shop.html" class="hover:text-orange-500 transition">Shop</a></li>
+      <li><a href="#" class="hover:text-orange-500 transition">About us</a></li>
+      <li><a href="#" class="hover:text-orange-500 transition">Contact us</a></li>
+    </ul>
+    <div class="hidden md:flex items-center space-x-4 text-gray-600 text-lg">
+      <button aria-label="Search" title="Search" class="hover:text-orange-500 transition">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button aria-label="User Account" title="User Account" class="hover:text-orange-500 transition">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button aria-label="Cart" title="Cart" class="hover:text-orange-500 transition relative">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l.89 4.48M5 6h15l-1.68 8.39a2 2 0 0 1-2 1.61H7a2 2 0 0 1-2-1.61L3 6"/></svg>
+        <span class="absolute -top-1 -right-1 text-xs bg-orange-500 text-white rounded-full w-4 h-4 flex items-center justify-center font-bold">5</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-title">
+        <h1>Shop</h1>
+        <p>Shop — find the best foods, toys, and accessories for your pets</p>
+      </div>
+    </div>
+  </section>
+  
+<div id="catScroll" style="display:none;"></div>
+  
+  
+
+  <!-- Main page: left filters, main product area -->
+  <div class="page">
+    <aside class="left-col">
+      <div class="controls">
+        <label for="search">Search</label>
+        <input id="search" type="search" placeholder="Search products..." disabled>
+
+        <label for="subcategorySelect">All Subcategories</label>
+        <select id="subcategorySelect" disabled>
+          <option value="">All Subcategories</option>
+        </select>
+
+        <label for="sortSelect">Sort By</label>
+        <select id="sortSelect" disabled>
+          <option value="">Default Sorting</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A-Z</option>
+          <option value="name-desc">Name: Z-A</option>
+        </select>
+      </div>
+    </aside>
+
+    <main class="main-col">
+      <div class="topbar">
+        <div class="result-count" id="resultCount">Showing products...</div>
+        <div style="color:var(--muted); font-size:13px"></div>
+      </div>
+
+      <div id="productList"></div>
+
+      <div class="pagination" id="pagination"></div>
+    </main>
+  </div>
+
+ <!-- Footer -->   
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-5 gap-12">
+      <div>
+        <div class="mb-6 flex items-center space-x-3">
+            
+          <div class="text-orange-500 font-extrabold text-xl rounded-full border-2 border-orange-500 w-10 h-10 flex items-center justify-center select-none">
+            <img src="https://petpantry.space/images/logo.png" alt="PetPantry+ logo" class="w-full h-full object-contain">
+          </div>
+          <span class="font-semibold text-lg text-orange-500 select-none">PetPantry+</span>
+        </div>
+        <p class="text-sm mb-4 max-w-xs">If you have any question, please contact us at <a href="mailto:petpantry@gmail.com" class="text-orange-500 underline">petpantry@gmail.com</a></p>
+        <address class="not-italic text-sm space-y-4">
+          <p>Quezon City</p>
+          <p>+63 929 683 8372</p>
+        </address>
+        
+      </div>
+
+      <div>
+        <h4 class="footer-heading font-inter ">Corporate</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">About Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading font-inter">Customer Service</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading font-inter">Services</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">Shop</a></li>
+        
+        </ul>
+      </div>
+
+      <div class="flex flex-col justify-start">
+        <h4 class="footer-heading mb-4 font-inter">Sign up for offers</h4>
+        <p class="mb-6 max-w-xs text-sm">Sign up for our newsletter to receive exclusive offers & discounts!</p>
+        <div class="flex max-w-xs">
+          <input type="email" placeholder="Your email address.." aria-label="Email address for newsletter" required class="w-full p-2 rounded-l-full border-none outline-none" />
+          <button type="button" aria-label="Subscribe to newsletter" class="bg-orange-500 p-2 rounded-r-full text-white hover:bg-orange-600 transition">
+            <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 4 11 13"></path><path d="M22 4 15 22 11 13 2 9 22 4z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm py-4">© 2025 PetPantry+. All rights reserved.</p>
+  </footer>
+  
+ <script>
+    // Carousel functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const carouselItems = document.querySelectorAll('.carousel-item');
+      const dots = document.querySelectorAll('.carousel-dot');
+      let currentIndex = 0;
+
+      // Show the first item and active dot
+      carouselItems[currentIndex].classList.add('opacity-100');
+      dots[currentIndex].classList.add('bg-orange-500', 'scale-125');
+
+      // Function to show a specific slide
+      function showSlide(index) {
+        carouselItems[currentIndex].classList.remove('opacity-100');
+        dots[currentIndex].classList.remove('bg-orange-500', 'scale-125');
+        currentIndex = index;
+        carouselItems[currentIndex].classList.add('opacity-100');
+        dots[currentIndex].classList.add('bg-orange-500', 'scale-125');
+      }
+
+      // Event listeners for dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+        });
+      });
+
+      // Auto-slide every 7 seconds
+      setInterval(() => {
+        showSlide((currentIndex + 1) % carouselItems.length);
+      }, 7000);
+    });
+  </script>
+  
+  <script src="shop.js"></script>
+</body>
+</html>
