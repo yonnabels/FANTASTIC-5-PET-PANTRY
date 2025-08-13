@@ -1,0 +1,65 @@
+/* Custom fonts & styles */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/* Contact Section */
+
+
+img[src*="bone-toy"] {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  z-index: 3;
+}
+
+
+
+
+
+/* Footer headings */
+.footer-heading {
+  color: #e56736;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Form input */
+input[type="email"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px 0 0 9999px;
+  border: none;
+  outline: none;
+}
+
+/* Submit button in newsletter */
+button[type="submit"] {
+  background-color: #fb7d1b;
+  border-radius: 0 9999px 9999px 0;
+  border: none;
+  padding: 0 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #de6514;
+}

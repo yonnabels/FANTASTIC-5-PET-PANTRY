@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - PetPantry+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="ContactUs.css" />
+</head>
+<body class="relative bg-white">
+
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center space-x-3">
+        <div class="rounded-full border-2 border-orange-500 w-10 h-10 flex items-center justify-center overflow-hidden">
+          <img src="logo.png" alt="PetPantry+ logo" class="w-full h-full object-contain">
+        </div>
+        <span class="font-semibold text-lg text-orange-500 select-none">PetPantry+</span>
+      </div>
+      <ul class="hidden md:flex items-center space-x-10 font-semibold text-gray-700 font-inter">
+        <li><a href="#" class="hover:text-orange-500 transition">Home</a></li>
+        <li><a href="#" class="hover:text-orange-500 transition">Shop</a></li>
+        <li><a href="#" class="hover:text-orange-500 transition">About us</a></li>
+        <li><a href="#" class="hover:text-orange-500 transition">Contact us</a></li>
+      </ul>
+      <div class="hidden md:flex items-center space-x-4 text-gray-600 text-lg">
+        <button aria-label="Search" title="Search" class="hover:text-orange-500 transition">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button aria-label="User Account" title="User Account" class="hover:text-orange-500 transition">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button aria-label="Cart" title="Cart" class="hover:text-orange-500 transition relative">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l.89 4.48M5 6h15l-1.68 8.39a2 2 0 0 1-2 1.61H7a2 2 0 0 1-2-1.61L3 6"/></svg>
+          <span class="absolute -top-1 -right-1 text-xs bg-orange-500 text-white rounded-full w-4 h-4 flex items-center justify-center font-bold">5</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  
+  <!-- Main Content -->
+<main class="pt-20 pb-16 relative" style="min-height: calc(100vh - 128px);">
+  <!-- Breadcrumb Section -->
+  <div class="relative w-full h-[150px] bg-cover bg-center" style="background-image: url('https://petio.wpbingosite.com/wp-content/uploads/2021/03/breadcumd.jpg');">
+    <div class="absolute inset-0 bg-dark-200 opacity-75"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center pt-10">
+      <h1 class="text-4xl font-bold text-white mb-4">Contact</h1>
+      <nav class="mb-10">
+        <a href="#" class="text-white-500 hover:underline mr-4">Home</a>
+        <span class="text-gray-500">/</span>
+        <span class="text-black-500">Contact</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="relative w-full flex flex-col md:flex-row bg-cover bg-right py-20 px-6 mt-8"
+       style="background-image: url('https://petio.wpbingosite.com/wp-content/uploads/2017/04/blog-4.jpg');">
+
+    <!-- Left Side Form -->
+    <div class="w-full md:w-1/2 bg-white p-8 rounded-lg shadow-lg z-10">
+      <h2 class="text-2xl font-bold mb-4">SEND US A MESSAGE</h2>
+      <form id="contactForm" class="space-y-4">
+        <div class="flex flex-col md:flex-row gap-4">
+          <input type="text" placeholder="Your name"
+                 class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+          <input type="email" placeholder="Your email"
+                 class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+        </div>
+        <textarea placeholder="Your message"
+                  class="w-full p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-orange-500" required></textarea>
+        <button type="submit"
+                class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
+          SEND
+        </button>
+      </form>
+    </div>
+
+    <!-- Empty Right Side to Show Background -->
+    <div class="w-full md:w-1/2"></div>
+  </div>
+</main>
+
+
+
+        
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-5 gap-12">
+      <div>
+        <div class="mb-6 flex items-center space-x-3">
+          <div class="text-orange-500 font-extrabold text-xl rounded-full border-2 border-orange-500 w-10 h-10 flex items-center justify-center select-none">
+            <img src="logo.png" alt="PetPantry+ logo" class="w-full h-full object-contain">
+          </div>
+          <span class="font-semibold text-lg text-orange-500 select-none">PetPantry+</span>
+        </div>
+        <p class="text-sm mb-4 max-w-xs">If you have any question, please contact us at <a href="mailto:petpantry@gmail.com" class="text-orange-500 underline">petpantry@gmail.com</a></p>
+        <address class="not-italic text-sm space-y-4">
+          <p>Quezon City</p>
+          <p>+63 929 683 8372</p>
+        </address>
+      </div>
+      <div>
+        <h4 class="footer-heading font-inter ">Corporate</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading font-inter">Customer Service</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading font-inter">Services</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:text-orange-400 transition">Shop</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col justify-start">
+        <h4 class="footer-heading mb-4 font-inter">Sign up for offers</h4>
+        <p class="mb-6 max-w-xs text-sm">Sign up for our newsletter to receive exclusive offers & discounts!</p>
+        <div class="flex max-w-xs">
+          <input type="email" placeholder="Your email address.." aria-label="Email address for newsletter" required class="w-full p-2 rounded-l-full border-none outline-none" />
+          <button type="button" aria-label="Subscribe to newsletter" class="bg-orange-500 p-2 rounded-r-full text-white hover:bg-orange-600 transition">
+            <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 4 11 13"></path><path d="M22 4 15 22 11 13 2 9 22 4z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm py-4">© 2025 PetPantry+. All rights reserved.</p>
+  </footer>
+
+  <script src="ContactUs.js"></script>
+</body>
+</html>
