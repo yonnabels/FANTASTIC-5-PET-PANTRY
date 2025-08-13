@@ -1,3 +1,6 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 /* Global Styles */
 * {
     margin: 0;
@@ -72,7 +75,11 @@ a {
 /* Header Styles */
 header {
     padding: 20px 0;
-    border-bottom: 1px solid #eee;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
 }
 
 nav {
@@ -84,11 +91,13 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    margin-left: 10px;
 }
 
 .nav-links li {
@@ -97,18 +106,40 @@ nav {
 
 .nav-links a {
     font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+nav i, nav svg {
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+nav i:hover, nav svg:hover {
+    color: #ffcc00;
+    transform: scale(1.2) rotate(5deg);
+}
+
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 80px 0;
-    background-image: url(dog.jpg);
+    height: 100vh;
+    padding: 140px 0; /* increased height */
+    background-image: url(dog2.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center top;
     background-attachment: fixed;
-    color: white;
+    color: rgb(176, 160, 160);
     position: relative;
+    font-family: 'Fredoka One', cursive; /* playful font */
 }
 
 .hero::before {
@@ -118,82 +149,160 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4); /* slightly darker for readability */
     z-index: 0;
 }
 
 .hero .container {
     position: relative;
     z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 100px; /* bigger heading */
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 30px;
+    line-height: 1.1;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* OWN (outlined) */
+.hero h1 span.outline {
+    color: transparent;
+    -webkit-text-stroke: 2px white; /* outline thickness + color */
+}
+
+/* YOUR PETS (solid) */
+.hero h1 span.solid {
+    color: white;
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        background-position: center -180px;
+    }
 }
 
 /* Features Section */
 .features {
     display: flex;
     justify-content: space-between;
-    padding: 60px 0;
+    align-items: center;
+    padding: 100px 0;
 }
 
 .feature {
     flex: 0 0 48%;
-    text-align: center;
+    text-align: left;
     background-image: url(girlwdogwhitebg.png);
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: 170% -50px;
     background-size: contain;
-    padding-right: 200px;
+    padding-right: 150px;
     position: relative;
-    min-height: 300px;
+    min-height: 500px;
 }
 
 .feature h2,
 .feature p,
 .feature .btn {
     max-width: calc(100% - 200px);
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
 }
 
 .feature h2 {
-    font-size: 32px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.feature .btn {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 12px 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.feature .btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+
+/*Featuring 2 Section */
+
+.featuring-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url(meeting2.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: white;
+    height: 100vh;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    
 }
 
 .featuring {
-    flex: 0 0 48%;
-    text-align: center;
-    background-image: url(meeting.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    min-height: 400px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-.featuring::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 0;
-}
-
-.featuring > * {
     position: relative;
     z-index: 1;
+    max-width: 600px;
+    padding: 60px;
+    margin-right: 80px;
+    text-align: right;
+     
+}
+
+.featuring h2,
+.featuring p,
+.featuring .btn {
+    margin-left: auto;
+}
+
+.featuring h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.featuring p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: grey;
+}
+
+.featuring .btn {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.featuring .btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 /* Testimonial Section */
@@ -220,82 +329,143 @@ nav {
 
 /* Newsletter Section */
 .newsletter {
-    background-color: #4CAF50;
-    color: white;
-    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f8f8, #ececec);
+    padding: 60px 20px;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .newsletter h2 {
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 30px;
+    color: #222;
 }
 
-.newletter-form {
-    max-width: 500px;
-    margin: 0 auto;
+.newsletter p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
 }
 
-.newsletter-form input {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 15px;
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
+
+.newsletter-form input[type="email"] {
+    height: 48px;
+    padding: 16px 24px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3 ease;
+    box-sizing: border-box;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: #000;
+}
+
 
 .newsletter-form .btn {
-    background-color: rgb(8, 8, 8);
-    color: #fdfffd;
+    background-color: black;
+    color: white;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 /* Footer */
 footer {
-    background-color: #a8a4a4;
-    color: white;
-    padding: 60px 0 30px;
+    background-color: #1d2836;
+    color: #d97d1c; /* Light text for contrast */
+    padding: 40px 0;
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .footer-column {
-    flex: 0 0 30%;
-    margin-bottom: 30px;
+    flex: 1;
+    min-width: 200px;
+    color: #fff;
 }
 
-.footer-column h3 {
-    color: #0d0d0d;
-    margin-bottom: 20px;
+.footer-column ul li {
+    color: #fff; /* Make list item text white */
+    margin-bottom: 8px;
 }
 
-.footer-column ul {
-    list-style: none;
+.footer-column ul li a {
+    color: #fff; /* Make list links white */
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.footer-column li {
-    margin-bottom: 10px;
+.footer-column ul li a:hover {
+    color: #ff9800; /* Hover color */
 }
 
-.footer-column a {
-    color: #ddd;
+.footer-brand-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid #444;
-    margin-top: 30px;
+.footer-brand-header img {
+    height: 40px; /* Adjust logo size */
+    width: auto;
 }
 
-.contact-info {
-    margin-top: 20px;
+.footer-brand-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .contact-info p {
-    margin-bottom: 5px;
+    margin: 5px 0;
+}
+
+.social-media a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none0;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #f5f4f3; /* Example hover color */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #656464;
+    padding-top: 10px;
 }
 
 /* Responsive Adjustments */
