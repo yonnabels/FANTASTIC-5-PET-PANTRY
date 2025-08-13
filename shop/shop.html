@@ -31,35 +31,54 @@
     -moz-osx-font-smoothing:grayscale;
   }
 
-  /* HERO / TOP BANNER */
-  .hero{
-    width:100%;
-    background-image: url("https://petio.wpbingosite.com/wp-content/uploads/2021/03/breadcumd.jpg");
-    background-size:cover;
-    background-position:center;
-    padding:150px 20px;
-    color:white;
-    position:relative;
-  }
-  .hero::after{
-    content:"";
-    position:absolute; inset:0; pointer-events:none;
-  }
-  .hero-inner{
-    position:relative;
-    max-width:var(--max-width);
-    margin:0 auto;
-    display:flex;
-    gap:24px;
-    align-items:center;
-    justify-content:space-between;
-  }
-  .hero-title{
-    text-align:center;
-    width:100%;
-  }
-  .hero-title h1{ font-size:48px; margin:0 0 8px; letter-spacing:1px;}
-  .hero-title p{ margin:0; opacity:0.95; font-size:15px; color:rgba(255,255,255,0.95) }
+
+ /* HERO / TOP BANNER */
+ .hero {
+  width: 100%;
+  background-image: url("https://petio.wpbingosite.com/wp-content/uploads/2021/03/breadcumd.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 20px;
+  color: white;
+  position: relative;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  pointer-events: none;
+  z-index: 0; /* Behind text */
+}
+
+.hero-inner {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  z-index: 1; /* Above overlay */
+}
+
+.hero-title h1 {
+  font-size: 48px;
+  margin: 0 0 8px;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.hero-title p {
+  margin: 0;
+  opacity: 0.95;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+}
+
 
   
 
@@ -218,12 +237,12 @@
 </header>
 
 
-  <!-- HERO -->
+<!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-title">
         <h1>Shop</h1>
-        <p>Shop — find the best foods, toys, and accessories for your pets</p>
+        <p>Discover top-quality food, toys, and accessories to keep your pets happy, healthy, and loved — all in one place.</p>
       </div>
     </div>
   </section>
@@ -359,3 +378,4 @@
   <script src="shop.js"></script>
 </body>
 </html>
+
