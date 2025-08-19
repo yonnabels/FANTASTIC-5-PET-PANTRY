@@ -10,22 +10,71 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Anton', sans-serif;
 }
 
+/* Contact Form Section */
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: url("Cat.png") no-repeat center center/cover;
+}
 
+.contact-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
 
+/* Two inputs side by side */
+.contact-form .form-row {
+  display: flex;
+  gap: 10px;
+}
 
+.contact-form .form-row input {
+  flex: 1;
+}
 
+/* Inputs & Textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
 
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
 
+/* Send Button */
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-/* Contact Section */
-
-
-img[src*="bone-toy"] {
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  z-index: 3;
+.contact-form button:hover {
+  background: #333;
 }
 
 
