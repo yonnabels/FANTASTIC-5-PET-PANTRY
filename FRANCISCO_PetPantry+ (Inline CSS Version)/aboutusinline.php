@@ -226,30 +226,15 @@
     }
 
     .feature h2 {
-        font-size: 40px;
-        margin-bottom: 30px;
+        font-size: 45px;
+        margin-bottom: 25px;
         font-weight: 700;
     }
 
     .feature p {
-        font-size: 29px;
+        font-size: 21px;
         line-height: 1.6;
         margin-bottom: 20px;
-    }
-
-    .feature .btn {
-        display: inline-block;
-        background-color: black;
-        color: white;
-        padding: 12px 4px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-    }
-
-    .feature .btn:hover {
-        background-color: white;
-        color: black;
-        border: 2px solid black;
     }
 
     /* Featuring 2 Section */
@@ -257,7 +242,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        background-image: url(meeting3.jpg); 
+        background-image: url(cat.jpg); 
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -285,31 +270,17 @@
     }
 
     .featuring h2 {
-        font-size: 60px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        color: white;
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: rgb(230, 230, 230);
     }
 
     .featuring p {
-        font-size: 20px;
+        font-size: 21px;
         line-height: 1.6;
-        margin-bottom: 30px;
-        color: #e0e0e0;
-    }
-
-    .featuring .btn {
-        background-color: black;
-        color: white;
-        padding: 12px 24px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-    }
-
-    .featuring .btn:hover {
-        background-color: white;
-        color: black;
-        border: 2px solid black;
+        margin-bottom: 20px;
+        color: #ffffff;
     }
 
     /* Testimonial Section */
@@ -537,12 +508,11 @@
       <section class="features">
         <div class="container">
             <div class="feature">
-                <h2>We're always here for our customers.</h2>
-                <p>Nullam quis ante. Pellentesque libero tortor, 
-                    tincidunt et, tinciduntarnet est.In hac habitasse platea dictumst. 
-                    Praesent nec nisi a purus blandit viverra </p>
-                    
-                    <a href="#" class="btn">Learn More</a>
+                <h2>COMPANY BACKGROUND</h2>
+                <p>PetPantry+ was established in 2024 in response to a growing demand among Filipino pet owners for natural, organic, and eco-conscious pet care products. 
+                    The founders identified a significant market gap: while large-scale pet retailers offer a wide range of products, many of these options are mass-produced, contain questionable ingredients, and lack sustainable packaging. 
+                    In contrast, consumers seeking transparency, quality, 
+                    and sustainability in their pet care choices often struggle to find reliable sources in a single, accessible platform</p>
             </div>
         </div>
       </section>     
@@ -551,11 +521,10 @@
          <section class="featuring-section">
     <div class="container">
         <div class="featuring">
-            <h2>We work hard, and we win</h2>
-            <p>Nullam quis ante. Pellentesque libero tortor, tincidunt 
-                et, tinciduntarnet est. In hac habitasse platea dictumst. Praesent nec nisi 
-                a purus blandit viverra</p>
-            <a href="#" class="btn">Learn More</a>
+            <h2>ABOUT PETPANTRY+</h2>
+            <p>At PetPantry+, we believe pets are more than just companions—they are family. That is why we are dedicated to providing quality food, treats, and essentials that keep tails wagging and whiskers happy.
+            From nutritious meals to everyday pet care needs, we work hard to make pet parenting easier, more joyful, and full of love. Our team is passionate about creating a space where pet owners can shop with confidence, knowing their furry friends are getting the best.
+            Because at PetPantry+, happy pets make happy homes. 🐾</p>
         </div>
     </div>
 </section>
