@@ -10,6 +10,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Anton', sans-serif;
 }
 
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem; /* increase from 1rem */
+}
+
 /* Contact Form Section */
 .contact-section {
   display: flex;
@@ -44,15 +49,26 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
 }
 
-/* Inputs & Textarea */
+/* Input fields styling (merged) */
+input[type="text"], 
+input[type="email"], 
+textarea,
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid #ccc;   /* Add outline */
+  border-radius: 6px;       /* Slightly rounded corners */
   font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+textarea:focus {
+  border-color: #f97316;   /* Highlight border on focus (orange shade) */
 }
 
 .contact-form textarea {
@@ -60,26 +76,27 @@ h1, h2, h3, h4, h5, h6 {
   resize: none;
 }
 
-/* Send Button */
+/* SEND button styling */
 .contact-form button {
   width: 100%;
   padding: 14px;
-  background: black;
+  background: linear-gradient(90deg, #ff7a18, #ffb347);
   color: white;
+  font-weight: bold;
   border: none;
-  border-radius: 6px;
+  border-radius: 30px; /* pill shape */
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
 }
 
 .contact-form button:hover {
-  background: #333;
+  background: linear-gradient(90deg, #ffb347, #ff7a18); /* reverse gradient */
+  transform: translateY(-3px); /* lift effect */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
-
-
-
-
 
 /* Footer headings */
 .footer-heading {
@@ -89,8 +106,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.7rem;
 }
 
-/* Form input */
-input[type="email"] {
+/* Newsletter input (kept separate) */
+input[type="email"].newsletter {
   width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 9999px 0 0 9999px;
