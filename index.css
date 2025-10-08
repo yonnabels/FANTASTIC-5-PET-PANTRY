@@ -1,0 +1,167 @@
+/* ================================
+   Fonts & Base
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+  line-height: 1.2;
+}
+
+/* Responsive text sizes */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.1rem; }
+}
+
+/* Utility */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ================================
+   Buttons
+================================ */
+.btn-black,
+.btn-white {
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Black button */
+.btn-black {
+  background-color: #000000;
+  color: #fff;
+}
+.btn-black:hover {
+  background-color: #333333;
+}
+
+/* White button */
+.btn-white {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+  padding: 0.75rem 1.75rem;
+}
+.btn-white:hover {
+  background-color: #f3f3f3;
+}
+
+/* Responsive buttons */
+@media (max-width: 640px) {
+  .btn-black,
+  .btn-white {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    width: 100%; /* full-width buttons for tap area */
+    display: block;
+  }
+}
+
+/* ================================
+   Badges & Ratings
+================================ */
+.badge-hot {
+  background-color: #fb7d1b;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.375rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.star {
+  color: #fac76c;
+  font-size: 0.9rem;
+}
+
+/* Smaller stars on mobile */
+@media (max-width: 480px) {
+  .star {
+    font-size: 0.75rem;
+  }
+}
+
+/* ================================
+   Footer
+================================ */
+.footer-heading {
+  color: #e56736;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .footer-heading {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .footer-links {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ================================
+   Forms
+================================ */
+input[type="email"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px 0 0 9999px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+/* Newsletter button */
+button[type="submit"] {
+  background-color: #fb7d1b;
+  border-radius: 0 9999px 9999px 0;
+  border: none;
+  padding: 0 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+  background-color: #de6514;
+}
+
+/* Responsive form layout */
+@media (max-width: 640px) {
+  input[type="email"] {
+    border-radius: 9999px;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+  button[type="submit"] {
+    border-radius: 9999px;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+}
